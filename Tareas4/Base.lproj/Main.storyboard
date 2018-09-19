@@ -35,11 +35,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tareas" id="bu6-zx-tTG">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="8KJ-sd-3BM"/>
+                        <barButtonItem key="backBarButtonItem" title="Back" id="q2t-71-V2N"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="8KJ-sd-3BM">
+                            <connections>
+                                <action selector="nuevaTarea:" destination="BYZ-38-t0r" id="Vgt-k5-sOp"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="dJo-eB-3Xd" id="UVV-Vw-LoJ"/>
-                        <segue destination="bII-36-NCD" kind="show" id="Dk7-iP-YJs"/>
+                        <segue destination="bII-36-NCD" kind="show" identifier="agregarSege" id="Dk7-iP-YJs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

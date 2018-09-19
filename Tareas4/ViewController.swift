@@ -56,6 +56,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         return[tarea1,tarea2,tarea3]
     }
+    @IBAction func nuevaTarea(_ sender: Any) {
+        performSegue(withIdentifier: "agregarSege", sender: nil)
+        
+        
+    }
 
 }
 
