@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -69,11 +70,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="64U-ta-1cr">
+                                <rect key="frame" x="56" y="110" width="263" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Importante" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QoS-yf-ieB">
+                                <rect key="frame" x="145" y="180" width="84.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TFW-n4-5tR">
+                                <rect key="frame" x="163" y="211" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="64U-ta-1cr" firstAttribute="top" secondItem="k2r-vQ-jNh" secondAttribute="bottom" constant="10" id="13K-Ha-dYt"/>
+                            <constraint firstItem="64U-ta-1cr" firstAttribute="leading" secondItem="PLn-br-y8r" secondAttribute="leadingMargin" constant="40" id="2Cz-PN-vAe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="64U-ta-1cr" secondAttribute="trailing" constant="40" id="4eE-q4-GCL"/>
+                            <constraint firstItem="QoS-yf-ieB" firstAttribute="top" secondItem="64U-ta-1cr" secondAttribute="bottom" constant="40" id="56H-Kk-XWG"/>
                             <constraint firstItem="k2r-vQ-jNh" firstAttribute="centerX" secondItem="PLn-br-y8r" secondAttribute="centerX" id="L6R-qg-CEX"/>
+                            <constraint firstItem="64U-ta-1cr" firstAttribute="centerX" secondItem="PLn-br-y8r" secondAttribute="centerX" id="ZU6-wG-jFi"/>
+                            <constraint firstItem="TFW-n4-5tR" firstAttribute="centerX" secondItem="PLn-br-y8r" secondAttribute="centerX" id="cOV-rz-8hU"/>
+                            <constraint firstItem="TFW-n4-5tR" firstAttribute="top" secondItem="QoS-yf-ieB" secondAttribute="bottom" constant="10" id="iti-Jc-vB4"/>
                             <constraint firstItem="k2r-vQ-jNh" firstAttribute="top" secondItem="vEB-h3-GWF" secondAttribute="bottom" constant="15" id="vbI-W5-LPT"/>
+                            <constraint firstItem="QoS-yf-ieB" firstAttribute="centerX" secondItem="PLn-br-y8r" secondAttribute="centerX" id="wzu-ZS-KOD"/>
                         </constraints>
                     </view>
                 </viewController>
