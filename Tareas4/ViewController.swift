@@ -58,9 +58,13 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     @IBAction func nuevaTarea(_ sender: Any) {
         performSegue(withIdentifier: "agregarSege", sender: nil)
-        
-        
     }
+    
+    override func prepare(for segue:UIStoryboardSegue,sender:Any?){
+        let siguienteVC=segue.destination as! CrearTareaViewController
+        siguienteVC.anteriorVC=self
+    }
+    
 
 }
 

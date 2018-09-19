@@ -13,9 +13,9 @@ class CrearTareaViewController: UIViewController {
     
     
     @IBOutlet weak var txtNombreTarea: UITextField!
-    
-    
     @IBOutlet weak var swImportante: UISwitch!
+    
+    var anteriorVC=ViewController()
     
     
     override func viewDidLoad() {
@@ -30,6 +30,9 @@ class CrearTareaViewController: UIViewController {
         let tarea=Tarea()
         tarea.nombre=txtNombreTarea.text!
         tarea.importante=swImportante.isOn
+        anteriorVC.tareas.append(tarea)
+        anteriorVC.tableView.reloadData()
+        navigationController!.popViewController(animated: true)
     }
 
     
