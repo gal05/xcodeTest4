@@ -30,7 +30,13 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  UITableViewCell()
         let tarea = tareas[indexPath.row]
+        if tarea.importante {
+            cell.textLabel?.text="😭\(tarea.nombre)"
+        }else{
+        
         cell.textLabel?.text=tarea.nombre
+        }
+        
         return cell
     }
 
