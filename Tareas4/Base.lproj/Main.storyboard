@@ -52,10 +52,10 @@
             </objects>
             <point key="canvasLocation" x="945" y="18"/>
         </scene>
-        <!--View Controller-->
+        <!--Crear Tarea View Controller-->
         <scene sceneID="cGh-Gb-hlP">
             <objects>
-                <viewController id="bII-36-NCD" sceneMemberID="viewController">
+                <viewController id="bII-36-NCD" customClass="CrearTareaViewController" customModule="Tareas4" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vEB-h3-GWF"/>
                         <viewControllerLayoutGuide type="bottom" id="ngo-T5-1Bu"/>
@@ -88,6 +88,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWW-Jq-Vkf">
                                 <rect key="frame" x="160" y="272" width="55" height="30"/>
                                 <state key="normal" title="Agregar"/>
+                                <connections>
+                                    <action selector="agregar:" destination="bII-36-NCD" eventType="touchUpInside" id="ag4-1Z-7ZV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -106,6 +109,10 @@
                             <constraint firstItem="QoS-yf-ieB" firstAttribute="centerX" secondItem="PLn-br-y8r" secondAttribute="centerX" id="wzu-ZS-KOD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="swImportante" destination="TFW-n4-5tR" id="boL-nw-nDY"/>
+                        <outlet property="txtNombreTarea" destination="64U-ta-1cr" id="J1l-Bf-Oxc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GST-BV-Y7J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
