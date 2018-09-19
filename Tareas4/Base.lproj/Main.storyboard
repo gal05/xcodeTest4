@@ -82,9 +82,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TFW-n4-5tR">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TFW-n4-5tR">
                                 <rect key="frame" x="163" y="211" width="51" height="31"/>
                             </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWW-Jq-Vkf">
+                                <rect key="frame" x="160" y="272" width="55" height="30"/>
+                                <state key="normal" title="Agregar"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -95,6 +99,8 @@
                             <constraint firstItem="k2r-vQ-jNh" firstAttribute="centerX" secondItem="PLn-br-y8r" secondAttribute="centerX" id="L6R-qg-CEX"/>
                             <constraint firstItem="64U-ta-1cr" firstAttribute="centerX" secondItem="PLn-br-y8r" secondAttribute="centerX" id="ZU6-wG-jFi"/>
                             <constraint firstItem="TFW-n4-5tR" firstAttribute="centerX" secondItem="PLn-br-y8r" secondAttribute="centerX" id="cOV-rz-8hU"/>
+                            <constraint firstItem="CWW-Jq-Vkf" firstAttribute="top" secondItem="TFW-n4-5tR" secondAttribute="bottom" constant="30" id="cjS-5U-9jm"/>
+                            <constraint firstItem="CWW-Jq-Vkf" firstAttribute="centerX" secondItem="PLn-br-y8r" secondAttribute="centerX" id="ewa-nT-vOz"/>
                             <constraint firstItem="TFW-n4-5tR" firstAttribute="top" secondItem="QoS-yf-ieB" secondAttribute="bottom" constant="10" id="iti-Jc-vB4"/>
                             <constraint firstItem="k2r-vQ-jNh" firstAttribute="top" secondItem="vEB-h3-GWF" secondAttribute="bottom" constant="15" id="vbI-W5-LPT"/>
                             <constraint firstItem="QoS-yf-ieB" firstAttribute="centerX" secondItem="PLn-br-y8r" secondAttribute="centerX" id="wzu-ZS-KOD"/>
