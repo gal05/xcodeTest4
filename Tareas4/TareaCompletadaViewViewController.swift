@@ -11,7 +11,7 @@ import UIKit
 class TareaCompletadaViewViewController: UIViewController {
     
     var tarea:Tarea?=nil
-    var anteriorVC = ViewController()
+    //var anteriorVC = ViewController()
 
     @IBOutlet weak var tareaLabel: UILabel!
     
@@ -29,7 +29,11 @@ class TareaCompletadaViewViewController: UIViewController {
     
 
     @IBAction func completarTarea(_ sender: Any) {
-        anteriorVC.tareas.remove(at: anteriorVC.indexSeleccionado!)
+        //anteriorVC.tareas.remove(at: anteriorVC.indexSeleccionado!)
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        context.delete(tarea!)
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        navigationController!.popViewController(animated: true)
     }
 
 
