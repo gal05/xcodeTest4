@@ -11,10 +11,12 @@ import UIKit
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+  
+    
     
     var tareas:[Tarea]=[]
     
-    
+    var indexSeleccionado:Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  UITableViewCell()
+        indexSeleccionado=indexPath.row
         let tarea = tareas[indexPath.row]
         if tarea.importante {
             cell.textLabel?.text="😭\(tarea.nombre)"
@@ -74,6 +77,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         if segue.identifier=="tareaSeleccionadaSegue" {
             let siguienteVC=segue.destination as! TareaCompletadaViewViewController
             siguienteVC.tarea=sender as? Tarea
+            siguienteVC.anteriorVC=self
             
         }
         

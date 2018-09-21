@@ -11,6 +11,7 @@ import UIKit
 class TareaCompletadaViewViewController: UIViewController {
     
     var tarea:Tarea?=nil
+    var anteriorVC = ViewController()
 
     @IBOutlet weak var tareaLabel: UILabel!
     
@@ -28,7 +29,7 @@ class TareaCompletadaViewViewController: UIViewController {
     
 
     @IBAction func completarTarea(_ sender: Any) {
-        
+        anteriorVC.tareas.remove(at: anteriorVC.indexSeleccionado!)
     }
 
 
