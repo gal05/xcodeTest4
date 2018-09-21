@@ -46,6 +46,7 @@
                     <connections>
                         <outlet property="tableView" destination="dJo-eB-3Xd" id="UVV-Vw-LoJ"/>
                         <segue destination="bII-36-NCD" kind="show" identifier="agregarSege" id="Dk7-iP-YJs"/>
+                        <segue destination="6sg-AY-dcm" kind="show" identifier="tareaSeleccionadaSegue" id="6w0-K9-GOa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -117,6 +118,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GST-BV-Y7J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1692" y="19"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="X87-jh-1dN">
+            <objects>
+                <viewController id="6sg-AY-dcm" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IMd-GT-p4b"/>
+                        <viewControllerLayoutGuide type="bottom" id="Giy-cx-F2p"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Uqq-EX-KbD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oGG-PW-EWH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1692" y="738"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rg8-0o-dd7">
