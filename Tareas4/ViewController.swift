@@ -40,6 +40,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         return cell
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let tarea=tareas[indexPath.row]
+        performSegue(withIdentifier: "tareaSeleccionadaSegue", sender: tarea)
+    }
     
     func crearTareas()->[Tarea]{
         let tarea1=Tarea()
