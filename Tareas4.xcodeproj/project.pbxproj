@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		861DA1F121558FEA00860A99 /* TareaCompletadaViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861DA1F021558FEA00860A99 /* TareaCompletadaViewViewController.swift */; };
 		86F06A382152DB2E003AAC6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F06A372152DB2E003AAC6A /* AppDelegate.swift */; };
 		86F06A3A2152DB2E003AAC6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F06A392152DB2E003AAC6A /* ViewController.swift */; };
 		86F06A3D2152DB2E003AAC6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86F06A3B2152DB2E003AAC6A /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		861DA1F021558FEA00860A99 /* TareaCompletadaViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TareaCompletadaViewViewController.swift; sourceTree = "<group>"; };
 		86F06A342152DB2E003AAC6A /* Tareas4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tareas4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86F06A372152DB2E003AAC6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86F06A392152DB2E003AAC6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				86F06A372152DB2E003AAC6A /* AppDelegate.swift */,
 				86F06A392152DB2E003AAC6A /* ViewController.swift */,
 				86F06A3B2152DB2E003AAC6A /* Main.storyboard */,
+				861DA1F021558FEA00860A99 /* TareaCompletadaViewViewController.swift */,
 				86F06A4E2152EF4F003AAC6A /* CrearTareaViewController.swift */,
 				86F06A4C2152E2A9003AAC6A /* Tarea.swift */,
 				86F06A412152DB2E003AAC6A /* Assets.xcassets */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86F06A4F2152EF4F003AAC6A /* CrearTareaViewController.swift in Sources */,
+				861DA1F121558FEA00860A99 /* TareaCompletadaViewViewController.swift in Sources */,
 				86F06A3A2152DB2E003AAC6A /* ViewController.swift in Sources */,
 				86F06A382152DB2E003AAC6A /* AppDelegate.swift in Sources */,
 				86F06A402152DB2E003AAC6A /* Tareas4.xcdatamodeld in Sources */,
@@ -314,6 +318,7 @@
 				86F06A4B2152DB2E003AAC6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

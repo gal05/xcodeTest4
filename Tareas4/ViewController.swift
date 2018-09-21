@@ -14,6 +14,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     var tareas:[Tarea]=[]
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -61,12 +63,20 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         return[tarea1,tarea2,tarea3]
     }
     @IBAction func nuevaTarea(_ sender: Any) {
-        performSegue(withIdentifier: "agregarSege", sender: nil)
+        performSegue(withIdentifier: "agregarSegue", sender: nil)
     }
     
     override func prepare(for segue:UIStoryboardSegue,sender:Any?){
-        let siguienteVC=segue.destination as! CrearTareaViewController
-        siguienteVC.anteriorVC=self
+        if segue.identifier=="agregarSegue" {
+            let siguienteVC=segue.destination as! CrearTareaViewController
+            siguienteVC.anteriorVC=self
+        }
+        if segue.identifier=="tareaSeleccionadaSegue" {
+            let siguienteVC=segue.destination as! TareaCompletadaViewViewController
+            siguienteVC.tarea=sender as? Tarea
+            
+        }
+        
     }
     
 
