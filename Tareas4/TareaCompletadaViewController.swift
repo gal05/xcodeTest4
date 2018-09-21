@@ -12,7 +12,10 @@ class TareaCompletadaViewController: UIViewController {
     
     var tarea=Tarea()
 
+    var anteriorVC=ViewController()
+    
     @IBOutlet weak var tareaLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +28,7 @@ class TareaCompletadaViewController: UIViewController {
     }
 
     @IBAction func completarTarea(_ sender: Any) {
-        
+        anteriorVC.tareas.remove(at: anteriorVC.indexSeleccionado!)
     }
 
     /*

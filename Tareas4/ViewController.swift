@@ -13,6 +13,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     @IBOutlet weak var tableView: UITableView!
     
     var tareas:[Tarea]=[]
+    var indexSeleccionado:Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,13 +23,16 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         tableView.dataSource = self
         tableView.delegate = self
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tareas.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  UITableViewCell()
+        indexSeleccionado=indexPath.row
         let tarea = tareas[indexPath.row]
         if tarea.importante {
             cell.textLabel?.text="😭\(tarea.nombre)"
@@ -73,6 +77,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         if segue.identifier=="tareaSeleccionadaSegue" {
             let siguienteVC=segue.destination as! TareaCompletadaViewController
             siguienteVC.tarea=sender as! Tarea
+            siguienteVC.anteriorVC=self
         }
         
 
