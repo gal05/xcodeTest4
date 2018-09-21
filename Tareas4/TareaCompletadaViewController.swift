@@ -10,7 +10,7 @@ import UIKit
 
 class TareaCompletadaViewController: UIViewController {
     
-    var tarea=Tarea()
+    var tarea: Tarea?=nil
 
     var anteriorVC=ViewController()
     
@@ -20,10 +20,10 @@ class TareaCompletadaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if tarea.importante {
-            tareaLabel.text="😹\(tarea.nombre)"
+        if tarea!.importante {
+            tareaLabel!.text="😹\(String(describing: tarea!.nombre))"
         }else{
-            tareaLabel.text=tarea.nombre
+            tareaLabel.text=tarea!.nombre
         }
     }
 
