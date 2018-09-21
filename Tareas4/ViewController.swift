@@ -27,7 +27,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         tableView.delegate = self
     }
     override func viewWillAppear(_ animated: Bool) {
-        
+        obtenerTareas()
         tableView.reloadData()
     }
 
@@ -40,15 +40,18 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         indexSeleccionado=indexPath.row
         let tarea = tareas[indexPath.row]
         if tarea.importante {
-            cell.textLabel?.text="😭\(String(describing: tarea.nombre))"
+            cell.textLabel?.text="😭\(String(describing: tarea.nombre!))"
         }else{
         
-        cell.textLabel?.text=tarea.nombre
+        cell.textLabel?.text=tarea.nombre!
         }
         
         return cell
     }
 
+    
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let tarea=tareas[indexPath.row]
         performSegue(withIdentifier: "tareaSeleccionadaSegue", sender: tarea)
@@ -73,11 +76,20 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         performSegue(withIdentifier: "agregarSegue", sender: nil)
     }
     
+    func obtenerTareas() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        do{
+            tareas=try context.fetch(Tarea.fetchRequest()) as! [Tarea]
+        }catch{
+            print("Ha ocurrido un error")
+        }
+    }
+    
     override func prepare(for segue:UIStoryboardSegue,sender:Any?){
-        if segue.identifier=="agregarSegue" {
+        /*if segue.identifier=="agregarSegue" {
             let siguienteVC=segue.destination as! CrearTareaViewController
             siguienteVC.anteriorVC=self
-        }
+        }*/
         if segue.identifier=="tareaSeleccionadaSegue" {
             let siguienteVC=segue.destination as! TareaCompletadaViewViewController
             siguienteVC.tarea=sender as? Tarea
