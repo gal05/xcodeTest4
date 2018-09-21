@@ -26,6 +26,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         tableView.dataSource = self
         tableView.delegate = self
     }
+    override func viewWillAppear(_ animated: Bool) {
+        
+        tableView.reloadData()
+    }
 
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
