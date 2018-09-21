@@ -21,7 +21,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        tareas=crearTareas()
+        //tareas=crearTareas()
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -40,7 +40,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         indexSeleccionado=indexPath.row
         let tarea = tareas[indexPath.row]
         if tarea.importante {
-            cell.textLabel?.text="😭\(tarea.nombre)"
+            cell.textLabel?.text="😭\(String(describing: tarea.nombre))"
         }else{
         
         cell.textLabel?.text=tarea.nombre
@@ -54,7 +54,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         performSegue(withIdentifier: "tareaSeleccionadaSegue", sender: tarea)
     }
     
-    func crearTareas()->[Tarea]{
+    /*func crearTareas()->[Tarea]{
         let tarea1=Tarea()
         tarea1.nombre="PAsear al perro"
         tarea1.importante=false
@@ -68,7 +68,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         tarea3.importante=false
         
         return[tarea1,tarea2,tarea3]
-    }
+    }*/
     @IBAction func nuevaTarea(_ sender: Any) {
         performSegue(withIdentifier: "agregarSegue", sender: nil)
     }

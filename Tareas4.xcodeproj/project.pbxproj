@@ -14,7 +14,6 @@
 		86F06A402152DB2E003AAC6A /* Tareas4.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 86F06A3E2152DB2E003AAC6A /* Tareas4.xcdatamodeld */; };
 		86F06A422152DB2E003AAC6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86F06A412152DB2E003AAC6A /* Assets.xcassets */; };
 		86F06A452152DB2E003AAC6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86F06A432152DB2E003AAC6A /* LaunchScreen.storyboard */; };
-		86F06A4D2152E2A9003AAC6A /* Tarea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F06A4C2152E2A9003AAC6A /* Tarea.swift */; };
 		86F06A4F2152EF4F003AAC6A /* CrearTareaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F06A4E2152EF4F003AAC6A /* CrearTareaViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +27,6 @@
 		86F06A412152DB2E003AAC6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86F06A442152DB2E003AAC6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86F06A462152DB2E003AAC6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		86F06A4C2152E2A9003AAC6A /* Tarea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tarea.swift; sourceTree = "<group>"; };
 		86F06A4E2152EF4F003AAC6A /* CrearTareaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrearTareaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,7 +65,6 @@
 				86F06A3B2152DB2E003AAC6A /* Main.storyboard */,
 				861DA1F021558FEA00860A99 /* TareaCompletadaViewViewController.swift */,
 				86F06A4E2152EF4F003AAC6A /* CrearTareaViewController.swift */,
-				86F06A4C2152E2A9003AAC6A /* Tarea.swift */,
 				86F06A412152DB2E003AAC6A /* Assets.xcassets */,
 				86F06A432152DB2E003AAC6A /* LaunchScreen.storyboard */,
 				86F06A462152DB2E003AAC6A /* Info.plist */,
@@ -154,7 +151,6 @@
 				86F06A3A2152DB2E003AAC6A /* ViewController.swift in Sources */,
 				86F06A382152DB2E003AAC6A /* AppDelegate.swift in Sources */,
 				86F06A402152DB2E003AAC6A /* Tareas4.xcdatamodeld in Sources */,
-				86F06A4D2152E2A9003AAC6A /* Tarea.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

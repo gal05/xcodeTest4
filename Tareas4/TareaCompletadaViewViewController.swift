@@ -19,7 +19,7 @@ class TareaCompletadaViewViewController: UIViewController {
         super.viewDidLoad()
 
         if tarea!.importante{
-            tareaLabel.text="👹\(tarea!.nombre)"
+            tareaLabel.text="👹\(String(describing: tarea!.nombre))"
         }else{
             tareaLabel.text=tarea!.nombre
         }
