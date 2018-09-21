@@ -40,6 +40,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         return cell
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let tarea=tareas[indexPath.row]
+        performSegue(withIdentifier: "tareaSeleccionadaSegue", sender: tarea)
+    }
     
     func crearTareas()->[Tarea]{
         let tarea1=Tarea()
@@ -61,8 +65,17 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     override func prepare(for segue:UIStoryboardSegue,sender:Any?){
-        let siguienteVC=segue.destination as! CrearTareaViewController
-        siguienteVC.anteriorVC=self
+        
+        if segue.identifier == "agregarSegue"{
+            let siguienteVC=segue.destination as! CrearTareaViewController
+            siguienteVC.anteriorVC=self
+        }
+        if segue.identifier=="tareaSeleccionadaSegue" {
+            let siguienteVC=segue.destination as! TareaCompletadaViewController
+            siguienteVC.tarea=sender as! Tarea
+        }
+        
+
     }
     
 
