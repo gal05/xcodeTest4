@@ -29,7 +29,7 @@ class CrearTareaViewController: UIViewController {
     @IBAction func agregar(_ sender: Any) {
         let tarea=Tarea()
         tarea.nombre=txtNombreTarea.text!
-        tarea.importante=false
+        tarea.importante=swImportante.isOn
         anteriorVC.tareas.append(tarea)
         anteriorVC.tableView.reloadData()
         navigationController!.popViewController(animated: true)
